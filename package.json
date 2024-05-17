@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^5.14.0",
+    "@prisma/client": "^5.13.0",
     "@zenstackhq/runtime": "^2.1.1",
     "@zenstackhq/server": "^2.1.1",
     "express": "^4.19.2",
