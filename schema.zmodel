@@ -13,6 +13,20 @@ generator client {
     provider = "prisma-client-js"
 }
 
+plugin openapi {
+    provider = '@zenstackhq/openapi'
+    prefix = '/api'
+    flavor = 'rest'
+    title = 'Backend API'
+    specVersion = '3.0.0'
+    version = '0.1.0'
+    description = 'My awesome backend API'
+    output = 'backend-api.json'
+    securitySchemes = { 
+        myBearer: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' }
+    }
+}
+
 model Cookies {
     id Int @id @default(autoincrement())
     text String 
