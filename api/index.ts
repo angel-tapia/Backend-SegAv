@@ -10,7 +10,7 @@ import path from 'path';
 // load it from a public location
 const options = { customCssUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.18.3/swagger-ui.css' };
 const spec = JSON.parse(
-    fs.readFileSync(path.join(__dirname, '../petstore-api.json'), 'utf8')
+    fs.readFileSync(path.join(__dirname, '../backend-api.json'), 'utf8')
 );
 
 const app = express();
