@@ -17,7 +17,11 @@ app.get('/api/save/:text', async (req, res) => {
     const text = req.params.text;
     try {
       // Save the text to the Cookies table
-      const savedCookie = await prisma.cookies.create({ data: { text: text } });
+      const savedCookie = await prisma.cookies.create({
+        data: {
+          text: text
+        }
+      });
       res.status(201).json({ message: 'Text saved successfully', data: savedCookie });
     } catch (error) {
       console.error('Error saving text:', error);
