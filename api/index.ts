@@ -42,7 +42,7 @@ app.use('/api/docs', swaggerUI.serve, swaggerUI.setup(spec, options));
 
 // create a RESTful-style API handler
 const apiHandler = RestApiHandler({
-  endpoint: 'https://backend-seg-av.vercel.app/' // Update this to match your Vercel deployment URL
+  endpoint: 'https://backend-seg-av.vercel.app/api' // Update this to match your Vercel deployment URL
 });
 
 app.use('/api', ZenStackMiddleware({ getPrisma: () => prisma, handler: apiHandler }));
