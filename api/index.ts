@@ -13,7 +13,7 @@ const prisma = new PrismaClient();
 
 // GET endpoint with route parameter "text"
 // GET endpoint with route parameter "text"
-app.get('/save/:text', async (req, res) => {
+app.get('/api/save/:text', async (req, res) => {
     const text = req.params.text;
     try {
       // Save the text to the Cookies table
